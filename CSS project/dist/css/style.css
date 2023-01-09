@@ -1,0 +1,164 @@
+/* Box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin  */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* font-family: 'Great Vibes', cursive; 
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
+  */
+/* Global
+--------------------------*/
+.image {
+  max-width: 100%;
+}
+
+.header {
+  padding: 0.5rem;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+/* Navigation
+-------------------------*/
+.nav {
+  border: 2px solid black;
+  padding: 0.4rem;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__list.toggled {
+  padding: 0.7rem 0;
+  height: auto;
+  visibility: visible;
+}
+
+.nav__link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: grey;
+}
+
+.nav__mobile {
+  text-align: center;
+}
+.nav__mobile .nav__button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+}
+.nav__mobile .nav__button::before, .nav__mobile .nav__button::after {
+  display: block;
+  content: "";
+}
+.nav__mobile .nav__button::before, .nav__mobile .nav__button::after,
+.nav__mobile .nav__button .hamburger {
+  width: 90%;
+  height: 3px;
+  margin: 0.2rem auto;
+  border-radius: 10px;
+  background-color: black;
+}
+.nav__mobile .nav__button.toggled .hamburger {
+  visibility: hidden;
+}
+.nav__mobile .nav__button.toggled::before {
+  transform: translate(0px, 6px) rotate(45deg);
+}
+.nav__mobile .nav__button.toggled::after {
+  transform: translate(0px, -6px) rotate(-45deg);
+}
+
+/* Articles
+-------------------------*/
+.article {
+  margin: 2rem 1rem;
+}
+.article .article__title {
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+/*-----------------------------------------
+-----------------Tablet--------------------
+-------------------------------------------*/
+@media (min-width: 700px) {
+  .nav__mobile {
+    display: none;
+  }
+  .nav {
+    padding: 1rem;
+    border-bottom-width: 1px;
+  }
+  .nav__list {
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    visibility: visible;
+  }
+  .article {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid black;
+  }
+  .article__html {
+    grid-area: html;
+  }
+  .article__luna {
+    grid-area: luna;
+  }
+  .article__css {
+    grid-area: css;
+  }
+  .article__brian {
+    grid-area: brian;
+  }
+  .article__coffee {
+    grid-area: coffee;
+  }
+  .main {
+    display: grid;
+    grid-template-areas: "luna luna luna html" "luna luna luna css" "coffee coffee coffee brian";
+  }
+}
+@media (min-width: 1000px) {
+  .main {
+    grid-template-areas: "html luna luna css" "brian coffee coffee coffee";
+  }
+}
