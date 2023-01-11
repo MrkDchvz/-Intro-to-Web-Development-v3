@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --operators: 223, 151, 76;
+  --btn: 215, 216, 218;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  background-color: burlywood;
+}
+
+.container {
+  min-width: 375px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.display {
+  background-color: black;
+  color: white;
+  padding: 2rem 1.3rem;
+  font-size: 3rem;
+  text-align: end;
+}
+
+
+.keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 2px solid black;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  padding: 1.5rem;
+  font-size: 2.7rem;
+  background-color: rgba(var(--btn));
+  border: 1px solid black;
+}
+
+.btn--operation {
+  background-color: rgb(var(--operators));
+  color: white;
+}
+
+
+.btn:hover,
+.btn--operation:hover {
+  filter: brightness(105%);
+}
+
+.btn:active,
+.btn--operation:active {
+  filter: brightness(85%);
+}
+
+
+
+.btn--clear {
+  grid-column: span 2;
+}
+
+.btn--0 {
+  grid-column: span 3;
+}
+
