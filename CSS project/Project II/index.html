@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Masters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav__container">
+        <img class="image" src="./img/coffee_masters_logo.png" alt="coffee masters logo">
+      <h1 class="main__title">Coffee Masters</h1>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section section__details">
+      <div class="section__container section__container--items">
+        <h2 class="section__title">Items</h2>
+        <div class="item__container">
+            <p class="item__quantity">1x</p>
+            <div class="item__description">
+              <h3 class="item__name">Cappuccino</h3>
+              <p class="item__add-on">Lite foam</p>
+            </div>
+            <h3 class="item__price">$3.35</h3>
+        </div>
+
+        <div class="item__container">
+          <p class="item__quantity">1x</p>
+          <div class="item__description">
+            <h3 class="item__name">Cappuccino</h3>
+            <p class="item__add-on">Lite milk</p>
+            <p class="item__add-on">Double expresso</p>
+          </div>
+          <h3 class="item__price">$3.85</h3>
+      </div>
+
+      <div class="item__container">
+        <p class="item__quantity">1x</p>
+        <div class="item__description">
+          <h3 class="item__name">Croissant</h3>
+          <p class="item__add-on">Butter</p>
+        </div>
+        <h3 class="item__price">$2.45</h3>
+    </div>
+      </div>
+
+      <div class="section__container section__container--name">
+        <h2 class="section__title">Name</h2>
+        <div class=" group group--name">
+          <label for="order" class="input-label">Name for order</label>
+          <input type="text" id="order" class="input input--order" required>
+        </div>
+      </div>
+
+      <div class="section__container section__container--payment">
+        <h2 class="section__title">Payment</h2>
+        <div class="container">
+          <div class="group group--card">
+            <label  for="card" class="input-label">Card Number</label>
+            <input type="number" id="card" class="input input--card" required>
+        </div>
+
+        <div class="group group--user">
+          <label  for="user" class="input-label">CCV Number</label>
+          <input type="number" id="user" class="input input--ccv" required>
+      </div>
+        </div>
+    </section>
+
+    <section class="section section--order">
+      <div class="expenses">
+        <div class="expenses__container expenses--sub-total">
+          <h3 class="expenses-name">Subtotal:</h3>
+          <h3 class="expenses-amount">$9.65</h3>
+        </div>
+        <div class="expenses__container expenses--sub-total">
+          <h3 class="expenses-name">Tax:</h3>
+          <h3 class="expenses-amount">$0.82</h3>
+        </div>
+        <div class="expenses__container expenses--total">
+          <h3 class="expenses-name">Total:</h3>
+          <h3 class="expenses-amount">$10.47</h3>
+        </div>
+      </div>
+      <button class="btn">Place Order</button>
+    </section>
+  </main>
+</body>
+</html>
