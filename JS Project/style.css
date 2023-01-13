@@ -24,17 +24,22 @@ body {
 }
 
 .container {
-  min-width: 375px;
-  max-width: 400px;
+  width: 375px;
   margin: auto;
 }
 
 .display {
   background-color: black;
+  min-height: 120px;
   color: white;
-  padding: 2rem 1.3rem;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 3rem;
   text-align: end;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 
